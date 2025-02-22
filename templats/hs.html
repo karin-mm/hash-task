@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/hsstyle.css">
+    <title>Hash Cryptor</title>
+</head>
+<body>
+
+    <div class="con">
+
+        <h1>Hash Cryptor!</h1>
+         
+        <div class="con2">
+
+            <input type="password" class="inp" placeholder="Enter Password..." required="true" style="font-size: 18px; font-family: sans-serif;">
+
+            <span class="show">
+                <input type="checkbox" onclick="show()">Show Password
+            </span>
+
+            <div class="btndiv">
+
+                <button class="btn" onclick="hashing()">Hashing</button>
+
+                <button class="btn2" onclick="reset()">Reset</button>
+
+            </div>
+
+        </div>
+             
+         <div id="output"></div>
+    
+       </div> 
+
+       <SCript src="../js/hsjs.js"></SCript>
+
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Hash Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Custom Hash Algorithm</h1>
+        <input type="text" id="inputText" placeholder="Enter text to hash">
+        <div>
+            <button onclick="computeHash()">Hash</button>
+            <button onclick="resetInput()">Reset</button>
+        </div>
+        <div class="output">
+            <strong>Hash Value:</strong> <span id="hashOutput"></span>
+        </div>
+    </div>
+
+    <script>
+        // Custom hash function
+        function customHash(input) {
+            let hash = 0;
+
+            // If the input is empty, return 0
+            if (input.length === 0) return hash;
+
+            // Iterate over each character in the input
+            for (let i = 0; i < input.length; i++) {
+                const char = input.charCodeAt(i); // Get the Unicode value of the character
+                hash = (hash << 5) - hash + char; // Shift and add to the hash
+                hash |= 0; // Convert to a 32-bit integer
+            }
+
+            return hash;
+        }
+
+        // Compute hash and display result
+        function computeHash() {
+            const input = document.getElementById("inputText").value;
+            const hash = customHash(input);
+            document.getElementById("hashOutput").textContent = hash;
+        }
+
+        // Reset input and hash output
+        function resetInput() {
+            document.getElementById("inputText").value = "";
+            document.getElementById("hashOutput").textContent = "";
+        }
+    </script>
+</body>
+</html> -->
