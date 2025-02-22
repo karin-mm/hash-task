@@ -1,16 +1,19 @@
-function hashw(input){
-    let hash = 0;
-    if (input.length === 0 ) {
+function hashw(input , hash2 ="myhash2"){
+    if (!input || input.length === 0) {
         alert("Enter The Password")
-        return hash;
+        return null;
     }
 
-    for (let i = 0; i < input.length; i++) {
-        const char = input.charCodeAt(i); 
+    const hash2inp = input + hash2;
+    let hash = 0;
+
+    for (let i = 0; i < hash2inp.length; i++) {
+        const char = hash2inp.charCodeAt(i); 
         hash = (hash << 5) - hash + char; 
         hash |= 0; 
     }
 
+    hash = Math.abs(hash).toString(16).padStart(8, '0');
     return hash;
 
 }
